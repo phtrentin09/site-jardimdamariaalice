@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/avaliar"
+  to = "https://www.google.com/maps/search/?api=1&query=Casa+de+Repouso+Jardim+da+Maria+Alice+Lisboa"
+  status = 302
