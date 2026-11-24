@@ -5,7 +5,7 @@
 
   /* menu */
   var hb=$('.hamb'),mn=$('.menu');
-  if(hb){hb.addEventListener('click',function(){var a=mn.classList.toggle('aberto');hb.classList.toggle('aberto-x',a);hb.setAttribute('aria-expanded',a)});
+  if(hb){hb.addEventListener('click',function(){var tp=hb.closest('.topo');mn.style.top=tp.offsetHeight+'px';mn.style.maxHeight='calc(100vh - '+tp.getBoundingClientRect().bottom+'px)';var a=mn.classList.toggle('aberto');hb.classList.toggle('aberto-x',a);hb.setAttribute('aria-expanded',a)});
     $$('.menu a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('aberto');hb.classList.remove('aberto-x')})});}
 
   /* avenida desenha-se ao entrar no ecra */
